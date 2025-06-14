@@ -89,6 +89,78 @@ let photos = [
   alt: "Hutan",
   category: "Alam"
 },
+{
+  name: "anime",
+  url: "anime.jpg",
+  alt: "anime",
+  category: "anime"
+},
+{
+  name: "Artis",
+  url: "artis.jpg",
+  alt: "artis",
+  category: "artis"
+},
+{
+  name: "Idol",
+  url: "idol.jpg",
+  alt: "idol",
+  category: "idol"
+},
+{
+  name: "anime",
+  url: "anime1.jpg",
+  alt: "anime",
+  category: "anime"
+},
+{
+  name: "Artis",
+  url: "artis1.jpg",
+  alt: "artis",
+  category: "artis"
+},
+{
+  name: "Idol",
+  url: "idol1.jpg",
+  alt: "idol",
+  category: "idol"
+},
+{
+  name: "anime",
+  url: "anime2.jpg",
+  alt: "anime",
+  category: "anime"
+},
+{
+  name: "Artis",
+  url: "artis2.jpg",
+  alt: "artis",
+  category: "artis"
+},
+{
+  name: "Idol",
+  url: "idol2.jpg",
+  alt: "idol",
+  category: "idol"
+},
+{
+  name: "anime",
+  url: "anime3.jpg",
+  alt: "anime",
+  category: "anime"
+},
+{
+  name: "Artis",
+  url: "artis3.jpg",
+  alt: "artis",
+  category: "artis"
+},
+{
+  name: "Idol",
+  url: "idol3.jpg",
+  alt: "idol",
+  category: "idol"
+},
 ];
 
 const gallery = document.getElementById("gallery");
