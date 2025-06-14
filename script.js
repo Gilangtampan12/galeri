@@ -305,6 +305,150 @@ let photos = [
   alt: "idol",
   category: "idol"
 },
+{
+  name: "Gfx",
+  url: "gfx.jpg",
+  alt: "bahan edit",
+  category: "gfx"
+},
+{
+  name: "Meme",
+  url: "meme.jpg",
+  alt: "meme",
+  category: "meme"
+},
+{
+  name: "Gfx",
+  url: "gfx1.jpg",
+  alt: "bahan edit",
+  category: "gfx"
+},
+{
+  name: "Meme",
+  url: "meme1.jpg",
+  alt: "meme",
+  category: "meme"
+},
+{
+  name: "Gfx",
+  url: "gfx2.jpg",
+  alt: "bahan edit",
+  category: "gfx"
+},
+{
+  name: "Meme",
+  url: "meme2.jpg",
+  alt: "meme",
+  category: "meme"
+},
+{
+  name: "Gfx",
+  url: "gfx3.jpg",
+  alt: "bahan edit",
+  category: "gfx"
+},
+{
+  name: "Meme",
+  url: "meme3.jpg",
+  alt: "meme",
+  category: "meme"
+},
+{
+  name: "Gfx",
+  url: "gfx4.jpg",
+  alt: "bahan edit",
+  category: "gfx"
+},
+{
+  name: "Meme",
+  url: "meme4.jpg",
+  alt: "meme",
+  category: "meme"
+},
+{
+  name: "Gfx",
+  url: "gfx5.jpg",
+  alt: "bahan edit",
+  category: "gfx"
+},
+{
+  name: "Meme",
+  url: "meme5.jpg",
+  alt: "meme",
+  category: "meme"
+},
+{
+  name: "Gfx",
+  url: "gfx6.jpg",
+  alt: "bahan edit",
+  category: "gfx"
+},
+{
+  name: "Meme",
+  url: "meme6.jpg",
+  alt: "meme",
+  category: "meme"
+},
+{
+  name: "Gfx",
+  url: "gfx7.jpg",
+  alt: "bahan edit",
+  category: "gfx"
+},
+{
+  name: "Meme",
+  url: "meme7.jpg",
+  alt: "meme",
+  category: "meme"
+},
+{
+  name: "Gfx",
+  url: "gfx8.jpg",
+  alt: "bahan edit",
+  category: "gfx"
+},
+{
+  name: "Meme",
+  url: "meme8.jpg",
+  alt: "meme",
+  category: "meme"
+},
+{
+  name: "Gfx",
+  url: "gfx9.jpg",
+  alt: "bahan edit",
+  category: "gfx"
+},
+{
+  name: "Meme",
+  url: "meme9.jpg",
+  alt: "meme",
+  category: "meme"
+},
+{
+  name: "Gfx",
+  url: "gfx10.jpg",
+  alt: "bahan edit",
+  category: "gfx"
+},
+{
+  name: "Meme",
+  url: "meme10.jpg",
+  alt: "meme",
+  category: "meme"
+},
+{
+  name: "Gfx",
+  url: "gfx11.jpg",
+  alt: "bahan edit",
+  category: "gfx"
+},
+{
+  name: "Meme",
+  url: "meme11.jpg",
+  alt: "meme",
+  category: "meme"
+},
 ];
 
 const gallery = document.getElementById("gallery");
