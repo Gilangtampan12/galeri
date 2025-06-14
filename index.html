@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Galeri Foto</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+  <h1>Galeri Foto Dinamis</h1>
+  
+  <div class="controls">
+    <input type="text" id="searchInput" placeholder="Cari foto..." />
+    <select id="filterCategory">
+      <option value="">Semua Kategori</option>
+      <option value="Alam">Alam</option>
+      <option value="Kota">Kota</option>
+      <option value="anak">Anak</option>
+    </select>
+    <button onclick="downloadAll()">Download Semua</button>
+    <label class="upload-label">
+      Upload Foto <input type="file" id="uploadInput" accept="image/*" multiple hidden />
+    </label>
+    <button onclick="toggleMode()">🌗 Mode</button>
+  </div>
+  
+  <p id="photoCount"></p>
+</header>
+
+  <main id="gallery"></main>
+
+  <!-- Lightbox -->
+  <div id="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img" src="" alt="Preview" />
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
