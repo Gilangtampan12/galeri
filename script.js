@@ -161,6 +161,150 @@ let photos = [
   alt: "idol",
   category: "idol"
 },
+{
+  name: "anime",
+  url: "anime4.jpg",
+  alt: "anime",
+  category: "anime"
+},
+{
+  name: "Artis",
+  url: "artis4.jpg",
+  alt: "artis",
+  category: "artis"
+},
+{
+  name: "Idol",
+  url: "idol4.jpg",
+  alt: "idol",
+  category: "idol"
+},
+{
+  name: "anime",
+  url: "anime5.jpg",
+  alt: "anime",
+  category: "anime"
+},
+{
+  name: "Artis",
+  url: "artis5.jpg",
+  alt: "artis",
+  category: "artis"
+},
+{
+  name: "Idol",
+  url: "idol5.jpg",
+  alt: "idol",
+  category: "idol"
+},
+{
+  name: "anime",
+  url: "anime6.jpg",
+  alt: "anime",
+  category: "anime"
+},
+{
+  name: "Artis",
+  url: "artis6.jpg",
+  alt: "artis",
+  category: "artis"
+},
+{
+  name: "Idol",
+  url: "idol6.jpg",
+  alt: "idol",
+  category: "idol"
+},
+{
+  name: "anime",
+  url: "anime7.jpg",
+  alt: "anime",
+  category: "anime"
+},
+{
+  name: "Artis",
+  url: "artis7.jpg",
+  alt: "artis",
+  category: "artis"
+},
+{
+  name: "Idol",
+  url: "idol7.jpg",
+  alt: "idol",
+  category: "idol"
+},
+{
+  name: "anime",
+  url: "anime8.jpg",
+  alt: "anime",
+  category: "anime"
+},
+{
+  name: "Artis",
+  url: "artis8.jpg",
+  alt: "artis",
+  category: "artis"
+},
+{
+  name: "Idol",
+  url: "idol8.jpg",
+  alt: "idol",
+  category: "idol"
+},
+{
+  name: "anime",
+  url: "anime9.jpg",
+  alt: "anime",
+  category: "anime"
+},
+{
+  name: "Artis",
+  url: "artis9.jpg",
+  alt: "artis",
+  category: "artis"
+},
+{
+  name: "Idol",
+  url: "idol9.jpg",
+  alt: "idol",
+  category: "idol"
+},
+{
+  name: "anime",
+  url: "anime10.jpg",
+  alt: "anime",
+  category: "anime"
+},
+{
+  name: "Artis",
+  url: "artis10.jpg",
+  alt: "artis",
+  category: "artis"
+},
+{
+  name: "Idol",
+  url: "idol10.jpg",
+  alt: "idol",
+  category: "idol"
+},
+{
+  name: "anime",
+  url: "anime11.jpg",
+  alt: "anime",
+  category: "anime"
+},
+{
+  name: "Artis",
+  url: "artis11.jpg",
+  alt: "artis",
+  category: "artis"
+},
+{
+  name: "Idol",
+  url: "idol11.jpg",
+  alt: "idol",
+  category: "idol"
+},
 ];
 
 const gallery = document.getElementById("gallery");
