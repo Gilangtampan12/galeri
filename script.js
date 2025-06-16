@@ -1,12 +1,5 @@
 let photos = [
-  {
-  name: "Anime",
-  url: "anime.mp4",
-  alt: "anime",
-  category: "anime",
-  type: "video"
-},
-  {
+    {
     name: "jalan",
     url: "alam.jpg",
     alt: "Pantai",
@@ -545,6 +538,27 @@ let photos = [
   url: "meme11.jpg",
   alt: "meme",
   category: "meme"
+},
+{
+  name: "Anime",
+  url: "anime.mp4",
+  alt: "anime",
+  category: "anime",
+  type: "video"
+},
+{
+  name: "Cosplay",
+  url: "cosplay.mp4",
+  alt: "anime",
+  category: "cosplay",
+  type: "video"
+},
+{
+  name: "Cosplay",
+  url: "cosplay1.mp4",
+  alt: "anime",
+  category: "cosplay",
+  type: "video"
 },
 ];
 
