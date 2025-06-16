@@ -680,31 +680,35 @@ function toggleMode() {
 
 // Load awal
 renderPhotos();
-if ("serviceWorker" in navigator) {
-  navigator.serviceWorker.register("service-worker.js");
-}
-let deferredPrompt;
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('service-worker.js')
+      .then(() => console.log('✅ Service Worker aktif!'))
+      .catch(err => console.error('❌ Gagal register SW:', err));
+  }
+  let deferredPrompt;
+  const installDiv = document.createElement('div');
+  installDiv.id = 'installPrompt';
+  installDiv.textContent = '📲 Install MoeGallery';
+  document.body.appendChild(installDiv);
 
-window.addEventListener('beforeinstallprompt', (e) => {
-  e.preventDefault();
-  deferredPrompt = e;
-  
-  // Tampilkan tombol custom install
-  const installBtn = document.createElement('button');
-  installBtn.textContent = 'Install MoeGallery';
-  installBtn.id = 'installBtn';
-  document.body.appendChild(installBtn);
-  
-  installBtn.addEventListener('click', () => {
-    installBtn.remove();
+  window.addEventListener('beforeinstallprompt', (e) => {
+    e.preventDefault();
+    deferredPrompt = e;
+
+    setTimeout(() => {
+      installDiv.classList.add('show');
+    }, 1000);
+  });
+
+  installDiv.addEventListener('click', () => {
+    installDiv.classList.remove('show');
     deferredPrompt.prompt();
-    deferredPrompt.userChoice.then((choiceResult) => {
-      if (choiceResult.outcome === 'accepted') {
-        console.log('Aplikasi diinstal!');
+    deferredPrompt.userChoice.then(choice => {
+      if (choice.outcome === 'accepted') {
+        console.log('✅ Aplikasi diinstal');
       } else {
-        console.log('Pengguna batal instal');
+        console.log('❌ Install dibatalkan');
       }
       deferredPrompt = null;
     });
   });
-});
