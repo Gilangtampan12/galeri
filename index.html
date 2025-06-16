@@ -3,12 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Galeri Foto</title>
+  <title>MoeGallery</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-  <h1>Galeri Foto Dinamis</h1>
+    <link rel="manifest" href="manifest.json" />
+  <h1>MoeGallery</h1>
   
   <div class="controls">
     <input type="text" id="searchInput" placeholder="Cari foto..." />
@@ -22,7 +23,7 @@
       <option value="idol">Idol</option>
       <option value="gfx">Mentahan</option>
      <option value="meme">Meme</option>
-     <option value="cosplay">Cosplay</option>
+     <option value="cosplay">cosplay</option>
     </select>
     <button onclick="downloadAll()">Download Semua</button>
     <label class="upload-label">
