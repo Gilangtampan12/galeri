@@ -680,3 +680,31 @@ function toggleMode() {
 
 // Load awal
 renderPhotos();
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("service-worker.js");
+}
+let deferredPrompt;
+
+window.addEventListener('beforeinstallprompt', (e) => {
+  e.preventDefault();
+  deferredPrompt = e;
+  
+  // Tampilkan tombol custom install
+  const installBtn = document.createElement('button');
+  installBtn.textContent = 'Install MoeGallery';
+  installBtn.id = 'installBtn';
+  document.body.appendChild(installBtn);
+  
+  installBtn.addEventListener('click', () => {
+    installBtn.remove();
+    deferredPrompt.prompt();
+    deferredPrompt.userChoice.then((choiceResult) => {
+      if (choiceResult.outcome === 'accepted') {
+        console.log('Aplikasi diinstal!');
+      } else {
+        console.log('Pengguna batal instal');
+      }
+      deferredPrompt = null;
+    });
+  });
+});
