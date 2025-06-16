@@ -1,21 +1,21 @@
 {
   "name": "MoeGallery",
   "short_name": "MoeGallery",
-  "start_url": ".",
+  "description": "Galeri foto anime dan gambar keren yang bisa kamu install sebagai aplikasi.",
+  "start_url": "/index.html",
   "display": "standalone",
-  "background_color": "#000000",
-  "theme_color": "#222222",
-  "orientation": "portrait",
+  "background_color": "#ffffff",
+  "theme_color": "#6e00ff",
   "icons": [
     {
-      "src": "icon-192.png",
+      "src": "icon.jpg",
       "sizes": "192x192",
-      "type": "image/png"
+      "type": "image/jpg"
     },
     {
-      "src": "icon-512.png",
+      "src": "icon.jpg",
       "sizes": "512x512",
-      "type": "image/png"
+      "type": "image/jpg"
     }
   ]
 }
