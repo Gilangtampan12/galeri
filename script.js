@@ -1,5 +1,12 @@
 let photos = [
   {
+  name: "Anime",
+  url: "anime.mp4",
+  alt: "anime",
+  category: "anime",
+  type: "video"
+},
+  {
     name: "jalan",
     url: "alam.jpg",
     alt: "Pantai",
@@ -282,6 +289,12 @@ let photos = [
   category: "artis"
 },
 {
+  name: "Anime",
+  url: "anime26.jpg",
+  alt: "Anime",
+  category: "anime"
+},
+{
   name: "Idol",
   url: "idol10.jpg",
   alt: "idol",
@@ -300,16 +313,34 @@ let photos = [
   category: "artis"
 },
 {
+  name: "Anime",
+  url: "anime25.jpg",
+  alt: "Anime",
+  category: "anime"
+},
+{
   name: "Idol",
   url: "idol11.jpg",
   alt: "idol",
   category: "idol"
 },
 {
+  name: "Anime",
+  url: "anime24.jpg",
+  alt: "Anime",
+  category: "anime"
+},
+{
   name: "Gfx",
   url: "gfx.jpg",
   alt: "bahan edit",
   category: "gfx"
+},
+{
+  name: "Anime",
+  url: "anime23.jpg",
+  alt: "Anime",
+  category: "anime"
 },
 {
   name: "Meme",
@@ -324,6 +355,12 @@ let photos = [
   category: "gfx"
 },
 {
+  name: "Anime",
+  url: "anime22.jpg",
+  alt: "Anime",
+  category: "anime"
+},
+{
   name: "Meme",
   url: "meme1.jpg",
   alt: "meme",
@@ -334,6 +371,12 @@ let photos = [
   url: "gfx2.jpg",
   alt: "bahan edit",
   category: "gfx"
+},
+{
+  name: "Anime",
+  url: "anime21.jpg",
+  alt: "Anime",
+  category: "anime"
 },
 {
   name: "Meme",
@@ -348,6 +391,12 @@ let photos = [
   category: "gfx"
 },
 {
+  name: "Anime",
+  url: "anime20.jpg",
+  alt: "Anime",
+  category: "anime"
+},
+{
   name: "Meme",
   url: "meme3.jpg",
   alt: "meme",
@@ -358,6 +407,12 @@ let photos = [
   url: "gfx4.jpg",
   alt: "bahan edit",
   category: "gfx"
+},
+{
+  name: "Anime",
+  url: "anime19.jpg",
+  alt: "Anime",
+  category: "anime"
 },
 {
   name: "Meme",
@@ -372,6 +427,12 @@ let photos = [
   category: "gfx"
 },
 {
+  name: "Anime",
+  url: "anime18.jpg",
+  alt: "Anime",
+  category: "anime"
+},
+{
   name: "Meme",
   url: "meme5.jpg",
   alt: "meme",
@@ -382,6 +443,12 @@ let photos = [
   url: "gfx6.jpg",
   alt: "bahan edit",
   category: "gfx"
+},
+{
+  name: "Anime",
+  url: "anime17.jpg",
+  alt: "Anime",
+  category: "anime"
 },
 {
   name: "Meme",
@@ -396,6 +463,12 @@ let photos = [
   category: "gfx"
 },
 {
+  name: "Anime",
+  url: "anime16.jpg",
+  alt: "Anime",
+  category: "anime"
+},
+{
   name: "Meme",
   url: "meme7.jpg",
   alt: "meme",
@@ -408,6 +481,12 @@ let photos = [
   category: "gfx"
 },
 {
+  name: "Anime",
+  url: "anime15.jpg",
+  alt: "Anime",
+  category: "anime"
+},
+{
   name: "Meme",
   url: "meme8.jpg",
   alt: "meme",
@@ -418,6 +497,12 @@ let photos = [
   url: "gfx9.jpg",
   alt: "bahan edit",
   category: "gfx"
+},
+{
+  name: "Anime",
+  url: "anime14.jpg",
+  alt: "Anime",
+  category: "anime"
 },
 {
   name: "Meme",
@@ -438,10 +523,22 @@ let photos = [
   category: "meme"
 },
 {
+  name: "Anime",
+  url: "anime13.jpg",
+  alt: "Anime",
+  category: "anime"
+},
+{
   name: "Gfx",
   url: "gfx11.jpg",
   alt: "bahan edit",
   category: "gfx"
+},
+{
+  name: "Anime",
+  url: "anime12.jpg",
+  alt: "Anime",
+  category: "anime"
 },
 {
   name: "Meme",
@@ -473,15 +570,26 @@ function renderPhotos() {
     card.className = "photo-card";
     card.dataset.name = photo.name;
 
-    card.innerHTML = `
-      <img src="${photo.url}" alt="${photo.alt}" />
-      <div class="photo-actions">
-        <button onclick="downloadImage(this)">Download</button>
-      </div>
-    `;
+    if (photo.type === "video") {
+  card.innerHTML = `
+    <video src="${photo.url}" controls></video>
+    <div class="photo-actions">
+      <button onclick="downloadMedia('${photo.url}', '${photo.alt || 'video'}')">Download</button>
+    </div>
+  `;
+} else {
+  card.innerHTML = `
+    <img src="${photo.url}" alt="${photo.alt}" />
+    <div class="photo-actions">
+      <button onclick="downloadImage(this)">Download</button>
+    </div>
+  `;
+}
 
-    const img = card.querySelector("img");
-    img.addEventListener("click", () => openLightbox(photo.url));
+    const media = card.querySelector("img, video");
+if (media) {
+  media.addEventListener("click", () => openLightbox(photo.url));
+}
     gallery.appendChild(card);
   });
 
@@ -497,11 +605,25 @@ function downloadImage(button) {
   link.click();
   document.body.removeChild(link);
 }
+function downloadMedia(url, filename) {
+  const link = document.createElement('a');
+  link.href = url;
+  link.download = filename;
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+}
 
 function openLightbox(url) {
   const lightbox = document.getElementById("lightbox");
   const lightboxImg = document.getElementById("lightbox-img");
-  lightboxImg.src = url;
+  
+  if (url.endsWith(".mp4") || url.endsWith(".webm")) {
+    lightboxImg.outerHTML = `<video id="lightbox-img" controls autoplay><source src="${url}" type="video/mp4"></video>`;
+  } else {
+    lightboxImg.outerHTML = `<img id="lightbox-img" src="${url}" alt="Preview" />`;
+  }
+  
   lightbox.style.display = "flex";
 }
 
